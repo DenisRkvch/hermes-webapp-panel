@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://telegram.org; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+<title>Hermes панель</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Hermes</h1>
+  <p id="hint" class="hint">Выберите команду — она будет отправлена в чат.</p>
+  <div id="cmds" class="grid"></div>
+  <p id="warn" class="warn" hidden>Откройте панель кнопкой клавиатуры в личном чате с ботом.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
