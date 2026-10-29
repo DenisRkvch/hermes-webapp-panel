@@ -4,6 +4,8 @@
   var CATALOG = {
     status:   ["Статус", "сессия, модель, токены"],
     usage:    ["Usage", "токены и лимиты"],
+    balance:  ["Баланс", "остаток на счёте провайдера"],
+    model:    ["Модели", "выбор модели кнопками в чате", true],
     context:  ["Контекст", "заполнение окна"],
     agents:   ["Агенты", "активные задачи"],
     profile:  ["Профиль", "имя и каталог"],
@@ -16,7 +18,7 @@
 
   function allowedFromUrl(search) {
     var m = /[?&]cmds=([^&]*)/.exec(search || "");
-    var list = m ? decodeURIComponent(m[1]).split(",") : ["status", "usage", "context", "agents", "profile", "whoami", "help"];
+    var list = m ? decodeURIComponent(m[1]).split(",") : ["status", "usage", "balance", "model", "context", "agents", "profile", "whoami", "help"];
     return list.filter(function (c, i) { return CATALOG.hasOwnProperty(c) && list.indexOf(c) === i; });
   }
 
