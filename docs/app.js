@@ -18,7 +18,7 @@
 
   function allowedFromUrl(search) {
     var m = /[?&]cmds=([^&]*)/.exec(search || "");
-    var list = m ? decodeURIComponent(m[1]).split(",") : ["status", "usage", "balance", "model", "context", "agents", "profile", "whoami", "help"];
+    var list = m ? decodeURIComponent(m[1]).split(",") : ["status", "usage", "balance", "model", "context", "agents", "profile", "whoami", "help", "new"];
     return list.filter(function (c, i) { return CATALOG.hasOwnProperty(c) && list.indexOf(c) === i; });
   }
 
